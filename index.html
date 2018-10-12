@@ -1,0 +1,99 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Star Wars RPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!--Character Select Screen-->
+    <div id="CharScreen" class="container-fluid animated zoomIn bounceOut">
+        <img class="img-fluid" src="assets/images/logo.png" alt="Star Wars Logo"/>
+        <br>
+        <br>
+        <h1>The future has many paths -choose wisely</h1>
+        <br>
+        <div id="game" class="ctr container card-deck">
+        </div>
+    </div>
+
+    <!-- Main Battle Screen -->
+    <div id="battleScreen" class="bg-trans container-fluid animate slideInDown">
+        <div class="row">
+            <div class="col-12 ctr">
+                <p>Enemies Remaining</p>
+                <div id="enemiesRemainingDiv"></div>
+            </div>
+        </div>
+        <div class="row text-center paddingTop">
+            <div class="col-5">
+                <p>Player:</p>
+                <div class="container" style="width: 30%;">
+                    <div id="playerDiv"></div>
+                    <div id="playerHealthDiv"></div>    
+                </div>
+            </div>
+            <div class="col-2 paddingTop">
+                <!-- VS. -->
+                <img src="assets/images/Vs.png" alt="VS" width="100" />
+            </div>
+            <div class="col-5">
+                <p>Enemy:</p>
+                <div class = "container">
+                    <div id="defenderDiv"></div>
+                    <div id="defenderHealthDiv"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Holds the Button -->
+        <div class="row">
+            <div class="col-12 btn">
+                <div id="msg"></div>
+                <br>
+                <button type="button" name="attack" id="attackBtn" class="btn btn-dark btn-lg"><p>Attack!</p></button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="globalMsg" class="animated fadeInUp">
+            <p class="shadow">
+                CONGRATULATIONS!
+                <br>You saved the Galazy kid!
+            </p>
+        </div>
+    </div>
+    <footer>
+        <p>Created by</p>
+        <img src="./assets/images/lightsaber.png" width="25px" alt="LightSaber"/> Mikkel P Chambers
+    </footer>
+
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
+        crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
+        crossorigin="anonymous "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
+        crossorigin="anonymous "></script>
+        <script src="./assets/javascript/game.js "></script>
+</body>
+
+</html>
