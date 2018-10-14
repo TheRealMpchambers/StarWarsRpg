@@ -8,13 +8,13 @@ body {
     min-height: 100vh;
     font-size: 1.1em !important;
     font-family: 'Nunito', sans-serif !important;
-    }
-
-.shadow {
-    text-shadow: 2px 1px 4px rgb(0,0,0);
 }
 
-#CharScreen {
+.shadow {
+    text-shadow: 2px 1px 4px rgb(0, 0, 0);
+}
+
+#firstScreen {
     min-height: 100%;
     position: absolute;
     text-align: center;
@@ -34,7 +34,7 @@ body {
     margin: 0 auto;
 }
 
-.paddingTop{
+.paddingTop {
     padding-top: 1%;
 }
 
@@ -47,9 +47,7 @@ body {
 }
 
 #msg {
-    padding-top: 20%;
-    text-align: center;
-    font-size: 3em;
+    font-size: 1.2em;
 }
 
 #globalMsg {
@@ -63,5 +61,6 @@ footer {
     font-size: 0.8em;
     bottom: 0;
     left: 0;
-    color: rgba(0, 0, 0, 0.76);
+    color: rgb(207, 207, 207);
+    background-color: rgba(0, 0, 0, 0.76);
 }
