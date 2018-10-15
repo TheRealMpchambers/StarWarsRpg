@@ -8,7 +8,7 @@ var defenderSelected = false;
 
 
 //Constructor
-function Character (Name, HP, AP, Counter, Pic) {
+function Character (name, hp, ap, counter, pic) {
     this.name = name;
     this.healthPoints = hp;
     this.attackPower = ap;
@@ -23,17 +23,17 @@ Character.prototype.increaseAttack = function() {
 };
 
 //Does Attack
-Character.prototype.attack = function (obj) {
-    Object.healthPoints -= this.attackPower;
-    $("#msg").html("You attacked" + 
-        Obj.name + "for" + this.attackPower + "damage points.");
+Character.prototype.attack = function (Obj) {
+    Obj.healthPoints -= this.attackPower;
+    $("#msg").html("You attacked " + 
+        Obj.name + "for " + this.attackPower + " damage points.");
     this.increaseAttack();
 };
 
 //Does Counter Attack
 Character.prototype.counterAttack = function (Obj) {
     Obj.healthPoints -= this.counterAttackPower;
-    $("#msg").append("<br>" + this.name + "counter attacked you for" + this.counterAttackPower + " damage points.");
+    $("#msg").append("<br>" + this.name + " counter attacked you for " + this.counterAttackPower + " damage points.");
 };
 
 
@@ -47,7 +47,7 @@ function initCharacters() {
 }
 
 //Saves Original Attack Value
-function setBaseAttack(Obj) {
+function setBaseAttack(obj) {
     baseAttack = obj.attackPower;
 }
 
@@ -135,19 +135,19 @@ $(document).on("click", "img", function () {
                 player = charArray[i];
                 playAudio();
                 $("body").css ({
-                    "background-image": "url('.assets/images" + this.id[0] + ".jpg')"
+                    "background-image": "url('./assets/images/" + this.id[0] + ".jpg')"
                 });
                 setBaseAttack(player);
                 charArray.splice(i, 1);
                 playerSelected = true;
                 changeView();
-                $("#msg").htm("Pick an enemy to fight");
+                $("#msg").html("Pick an enemy to fight");
             }
         }
         updatePics("#game", "#defendersLeftDiv");
         $("#playerDiv").append(this);
-        $("#playerDiv").
-        $("#playerDiv").
+        $("#playerDiv").addClass("animated zoomIn");
+        $("#playerDiv").append(player.name);
         $("#playerHealthDiv").append("HP: " + player.healthPoints);
         $("#playerHealthDiv").addClass("animated zoomIn");
     }
