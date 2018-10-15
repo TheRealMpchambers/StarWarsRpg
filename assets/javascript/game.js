@@ -39,11 +39,11 @@ Character.prototype.counterAttack = function (Obj) {
 
 //Character Select Options
 function initCharacters() {
-    var luke = new Character("Luke Skywalker", 100, 10, 5, "./assets/images/luke.jpg");
-    var vader = new Character("Darth Vader", 200, 50, 30, "./assets/images/vader.jpg");
-    var obi = new Character("Obi-Wan Kenobi", 150, 15, 2, "./assets/images/obi.jpg");
-    var chew = new Character("Chewbacca", 180, 30, 12, "./assets/images/chew.jpg");
-    charArray.push(luke, vader, obi, chew);
+    var lionel = new Character("Lionel", 100, 10, 5, "./assets/images/lionel.jpg");
+    var tygra = new Character("Tygra", 200, 50, 30, "./assets/images/tygra.jpg");
+    var cheetara = new Character("Cheetara", 150, 15, 2, "./assets/images/cheetara.jpg");
+    var mummra = new Character("Mumm Ra", 180, 30, 12, "./assets/images/mummra.jpg");
+    charArray.push(lionel, tygra, cheetara, mummra);
 }
 
 //Saves Original Attack Value
